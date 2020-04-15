@@ -11,7 +11,8 @@ const Post = props => {
 
 
   // set up state for the likes
-  const [numberOfLikes, setNumberOfLikes] = useState(0);
+  const [numberOfLikes, setNumberOfLikes] = useState(props.post.likes);
+  
   function likePlusOne() {
     setNumberOfLikes(numberOfLikes + 1);
   }

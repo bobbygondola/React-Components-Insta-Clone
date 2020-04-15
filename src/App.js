@@ -10,10 +10,13 @@ import SearchBar from "./components/SearchBar/SearchBarContainer";
 import dummyData from "./dummy-data";
 
 const App = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
     <div className="App">
-      <SearchBar />
-      <PostsPage data = {dummyData}/>
+      <SearchBar setSearchTerm={setSearchTerm} />
+
+      <PostsPage data={dummyData} />
     </div>
   );
 };
