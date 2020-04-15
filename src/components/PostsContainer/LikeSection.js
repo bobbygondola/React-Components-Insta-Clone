@@ -4,6 +4,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons'
+import Post from 
 
 const LikeSection = props => {
   return (
@@ -19,7 +20,7 @@ const LikeSection = props => {
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className="like-number">{props.numberOfLikes}</p>
+      <p className="like-number" onClick>{props.likes} likes</p>
     </div>
   )
 };
